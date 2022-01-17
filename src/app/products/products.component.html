@@ -1,7 +1,4 @@
 <div class="products">
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
+    <p *ngIf="loading"></p>
+    <app-card *ngFor="let item of products" [product]="item"></app-card>
 </div>
