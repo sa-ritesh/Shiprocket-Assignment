@@ -1,12 +1,12 @@
 <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://res.cloudinary.com/bookit/image/upload/v1606231283/products/camera_ridc0i.jpg" alt="Card image cap">
+    <img class="card-img-top" [src]="imageUrl" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <h5 class="card-title">{{product.name}}</h5>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Reviews: 4/5</li>
-      <li class="list-group-item">Category: Cameras</li>
+      <li class="list-group-item">Price: {{product.price}}</li>
+      <li class="list-group-item">Reviews: {{product.ratings}}/5</li>
+      <li class="list-group-item">Category: {{product.category}}</li>
     </ul>
     <div class="card-bodyy">
       <button class="btn btn-primary">Add to Cart</button>

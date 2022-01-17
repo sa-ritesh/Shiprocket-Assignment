@@ -1,4 +1,6 @@
-<div class="products">
+<div>
     <p *ngIf="loading"></p>
-    <app-card *ngFor="let item of products" [product]="item"></app-card>
+    <div class="products" *ngIf="!loading">
+     <app-card *ngFor="let item of products" [product]="item"></app-card>
+    </div>
 </div>
