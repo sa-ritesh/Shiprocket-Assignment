@@ -23,4 +23,7 @@ export class HeaderComponent implements OnInit {
   searchProducts(){
        this.productsService.searchProducts(this.keyword.nativeElement.value);
   }
+  fetchProducts(){
+       this.productsService.fetchProducts();
+  }
 }
