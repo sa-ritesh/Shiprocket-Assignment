@@ -2,5 +2,12 @@
   padding: 2rem;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
+}
+.loader {
+  margin-left: 47%;
+  margin-right: auto;
+  width: 90%;
+  font-size: 30rem;
 }
