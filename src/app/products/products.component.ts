@@ -12,11 +12,15 @@ export class ProductsComponent implements OnInit {
   loading:boolean=true;
   constructor(private productsService:ProductsService) { }
   ngOnInit(){
-    this.productsService.fetchProducts().subscribe((res)=>{
-      this.loading=false;
-         this.products=res.products;
-         console.log(res);
-    });
+    this.productsService.loadingSubject.subscribe((res:boolean)=>{
+      console.log("->   ",res);
+      this.loading=res;
+    })
+    this.productsService.fetchProducts();
+    this.productsService.productsChanged.subscribe((res)=>{
+        this.loading=false;
+        this.products=res;
+    })
   }
 
 }

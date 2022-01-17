@@ -15,9 +15,12 @@ export class HeaderComponent implements OnInit {
   itemCountSubs:Subscription=EMPTY_SUBSCRIPTION;
   ngOnInit(): void {
     this.itemCount=this.productsService.cartItem;
-    console.log("ok");
+    // console.log("ok");
     this.productsService.itemsChanged.subscribe((res)=>{
          this.itemCount=res;
     })
+  }
+  searchProducts(){
+       this.productsService.searchProducts('app');
   }
 }
