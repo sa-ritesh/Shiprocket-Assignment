@@ -1,0 +1,11 @@
+.card {
+  margin: 1rem;
+}
+.card-bodyy {
+  display: flex;
+  justify-content: center;
+}
+.card-img-top {
+  width: 80%;
+  margin-left: 1.5rem;
+}

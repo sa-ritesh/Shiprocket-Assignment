@@ -34,7 +34,7 @@ body {
 }
 input {
   width: 60%;
-  height: 2rem;
+  height: 2.5rem;
   border-top-left-radius: 0.3rem;
   border-bottom-left-radius: 0.3rem;
   border: 0.1px solid grey;
@@ -71,7 +71,6 @@ input {
 }
 .cart span {
   background-color: #febd69;
-  padding: 0.2em;
   border-radius: 25%;
   padding-left: 0.3rem;
   padding-right: 0.3rem;
