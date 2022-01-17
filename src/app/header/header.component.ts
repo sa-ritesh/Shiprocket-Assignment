@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { EMPTY, Subscription } from 'rxjs';
 import { EMPTY_SUBSCRIPTION } from 'rxjs/internal/Subscription';
 import { ProductsService } from 'src/services/products.service';
 
@@ -9,7 +9,7 @@ import { ProductsService } from 'src/services/products.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+ @ViewChild('searchInput') keyword:any;
   constructor(private productsService:ProductsService) { }
   itemCount:number=0;
   itemCountSubs:Subscription=EMPTY_SUBSCRIPTION;
@@ -21,6 +21,6 @@ export class HeaderComponent implements OnInit {
     })
   }
   searchProducts(){
-       this.productsService.searchProducts('app');
+       this.productsService.searchProducts(this.keyword.nativeElement.value);
   }
 }
