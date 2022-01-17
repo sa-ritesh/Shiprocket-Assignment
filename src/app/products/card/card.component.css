@@ -8,8 +8,12 @@
 }
 .card-img-top {
   width: 80%;
-  margin-left: 1.5rem;
+  margin-left: 10%;
 }
-.card img {
-  width: 80%;
+.imager_wrapper {
+  width: 30rem;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

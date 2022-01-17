@@ -1,5 +1,7 @@
 <div class="card">
-    <img class="card-img-top" [src]="imageUrl" alt="Card image cap">
+    <div class="image_wrapper">
+      <img class="card-img-top" [src]="imageUrl" alt="Card image cap">
+    </div>
     <div class="card-body">
       <h5 class="card-title">{{product.name}}</h5>
     </div>
@@ -9,6 +11,6 @@
       <li class="list-group-item">Category: {{product.category}}</li>
     </ul>
     <div class="card-bodyy">
-      <button class="btn btn-primary">Add to Cart</button>
+      <button class="btn btn-primary" style="margin-bottom: 0.5rem;">Add to Cart</button>
     </div>
   </div>
